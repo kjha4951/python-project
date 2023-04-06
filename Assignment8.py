@@ -18,3 +18,11 @@ print(obj3.name,obj3.role)
 obj4=Kom("puja","web devloper")
 # print(obj4.name,obj4.role)
 obj4.myfun()
+
+# Unlike class attributes, instance attributes are not shared by objects. Every object has its own copy of the instance attribute
+#  (In case of class attributes all object refer to single copy).
+# so thats why instance attributes have more preferrence
+
+
+# super is use to refer the parent class instance
+#class is define to inharit all the properties of another class 

@@ -7,5 +7,5 @@ color=["orange","white","green"]
 for x in range(19):
     for i in color:
         turtle.color(i)
-        turtle.circle(150)
+        turtle.circle(500)
         turtle.left(10)

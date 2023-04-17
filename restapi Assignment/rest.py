@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-# import requests
+
 app = Flask(__name__)
 
 tasks = [
@@ -31,7 +31,7 @@ def hello_world():
     return 'Hello, World!'
 
 
-@app.route('/Prefix', methods = ["Post"])
+@app.route('/justpost', methods = ["Post"])
 def add_task():
     if not request.json:
         return jsonify({
@@ -39,12 +39,11 @@ def add_task():
             "message": "Please provide the data"
         },400 )
     task = {
-
-        "id": task[-1]['id'] + 1,
-        "title": request.json['title'],
-        "discription": request.json.get('discription', ""),
-        "done": False
-    }
+       'id':tasks[-1]['id'] + 1,
+       'title':request.json['title'],
+       'discription': request.json['discription'],
+       'done':False
+     }
     tasks.append(task)
     return jsonify ({
 
